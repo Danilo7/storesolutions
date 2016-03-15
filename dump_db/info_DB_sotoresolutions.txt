@@ -1,0 +1,26 @@
+Informaçõe JavaDB StoreSolutions(SQL)
+
+JavaDB  = storesolutions;
+URLdoDB = "jdbc:mysql://localhost:3306/storesolutions?zeroDateTimeBehavior=convertToNull";
+
+-- TABLE PRODUCT WITH SIMPLE DATA
+CREATE TABLE PRODUCT
+(
+    ID int NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY 
+               (START WITH 1, INCREMENT BY 1),
+    TITLE varchar(255) NOT NULL,
+    DESCRIPTION varchar(255),
+    PRICE DOUBLE NOT NULL,
+    IMAGE varchar(255)
+);
+
+
+INSERT INTO PRODUCT(TITLE, DESCRIPTION, PRICE, IMAGE) 
+VALUES  ('Calculadora2', 'Calculadora Báscia', 5000, 'images/calc.png'),
+        ('Calculadora2', 'Calculadora Báscia', 5000, 'images/calc.png'),
+        ('FluxCaixa', 'Controle de caixa', 15000, 'images/fluxcaixa.png'),
+        ('FluxCaixa2', 'Controle de caixa', 15000, 'images/fluxcaixa.png'),
+        ('EdiText', 'Editor de Texto', 8000, 'images/editext.png'),
+        ('EdiText', 'Editor de Texto', 8000, 'images/editext.png'),
+        ('NavWeb', 'Navegador Web', 18000, 'images/navweb.png'),
+        ('NavWeb', 'Navegador Web', 18000, 'images/navweb.png');
